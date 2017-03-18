@@ -97,6 +97,7 @@ header_files = [
     "src/blenlib/BLI_sys_types.h",
     "src/blenlib/BLI_system.h",
     "src/blenlib/BLI_utildefines.h",
+    "src/blenlib/BLI_path_util.h",
 
 
     # * mathutils *
