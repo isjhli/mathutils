@@ -27,7 +27,7 @@ def update_source(files, files_dest, files_level):
     import shutil
     for f in files:
         f_src = os.path.join(BLENDER_DIR, f)
-        f_dst = os.sep.join(f.split(os.sep)[files_level:])
+        f_dst = os.sep.join(os.path.normpath(f).split(os.sep)[files_level:])
         f_dst = os.path.join(SOURCE_DIR, files_dest, f_dst)
         print("%r -> %r" % (f_src, f_dst))
 
@@ -84,6 +84,7 @@ files_blenlib = (
     "source/blender/blenlib/BLI_sys_types.h",
     "source/blender/blenlib/BLI_system.h",
     "source/blender/blenlib/BLI_utildefines.h",
+    "source/blender/blenlib/BLI_path_util.h",
     "source/blender/blenlib/intern/math_base.c",
     "source/blender/blenlib/intern/math_bits_inline.c",
     "source/blender/blenlib/intern/math_base_inline.c",
